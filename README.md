@@ -1,6 +1,7 @@
 # nodesuicide
 
 https://code.visualstudio.com/docs/nodejs/nodejs-tutorial
+https://www.npmjs.com/package/express-session
 
 ```
 npm install -g express-generator
