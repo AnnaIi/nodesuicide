@@ -1,9 +1,9 @@
 html 
     body
-        h1='Сайт о самоубийствах'
+        h1 Каталог самоубийц
         if req.session.loggedin
             div
-                a(href='/suicides/p') Известные самоубийцы
+                a(href='/suicides/p') Каталог
             div
                 a(href='/login/logout') Выйти
         else 
