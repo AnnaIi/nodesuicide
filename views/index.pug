@@ -1,1 +1,11 @@
-<h1>ТРЕМС</h1>
+html 
+    body
+        h1='Сайт о самоубийствах'
+        if req.session.loggedin
+            div
+                a(href='/suicides/p') Известные самоубийцы
+            div
+                a(href='/login/logout') Выйти
+        else 
+            a(href='/login') Для просмотра авторизуйтесь
+

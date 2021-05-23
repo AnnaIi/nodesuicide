@@ -1,0 +1,15 @@
+doctype html
+html
+    body
+        h1=title
+        
+        each person in persons.data
+            - var link='/suicides/s?person=' + person.id
+            div
+                h2
+                    a(href=link)= person.name
+                - var d= person.born_date.toDateString()
+                p=d
+                - var d= person.death_date.toDateString()
+                p=d
+                p=person.info

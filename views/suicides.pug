@@ -1,0 +1,13 @@
+doctype html
+html
+    body
+        h1=title
+        
+        each suicide in suicides.data
+        
+            div
+                h2=suicide.date
+                p=suicide.mdescription 
+                p=suicide.tdescription
+                p=suicide.sdescription
+        a(href='/suicides/p') К списку
