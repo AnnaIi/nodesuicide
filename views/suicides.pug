@@ -2,12 +2,21 @@ doctype html
 html
     body
         h1=title
-        
-        each suicide in suicides.data
-        
-            div
-                h2=suicide.date
-                p=suicide.mdescription 
-                p=suicide.tdescription
-                p=suicide.sdescription
+        table 
+            tr
+                td 
+                    - var link='/img/' + suicides.data[0].id + '.jpg'
+                    img(src=link) 
+                td(style='vertical-align:top')
+                    each suicide in suicides.data
+                    
+                        div
+                            
+                            h2=suicide.date
+                            p
+                                - var d='/suicides/p?id=' + suicide.mid
+                                a(href=d)=suicide.mdescription 
+                            p=suicide.tdescription
+                            p=suicide.place
+                            p=suicide.sdescription
         a(href='/suicides/p') Назад

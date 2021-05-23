@@ -31,9 +31,14 @@ router.get('/p', function(req, res, next){
   if (!req.session.loggedin){
     res.redirect('/login');
   }
-  suicideModel.getPersons().then(
+  id = false
+  if (req.query.id){
+    id = req.query.id;
+  }
+  suicideModel.getPersons(id).then(
     data => {
       console.log(data);
+      var title = 'Самоубийцы'
       res.render('persons', { title:'Самоубийцы', persons: data}
       );
       res.end()
